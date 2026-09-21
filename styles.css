@@ -18,7 +18,7 @@ a{color:inherit}
 .wrap{width:min(1080px,92vw); margin:0 auto}
 
 /* ---------- hero ---------- */
-.hero{position:relative; min-height:88svh; display:flex; align-items:center; overflow:hidden}
+.hero{position:relative; min-height:100svh; display:flex; align-items:center; overflow:hidden; padding:3.5rem 0 2.5rem}
 .rings{position:absolute; inset:0; pointer-events:none;
   -webkit-mask-image:radial-gradient(60% 55% at 50% 48%, #000 35%, transparent 78%);
   mask-image:radial-gradient(60% 55% at 50% 48%, #000 35%, transparent 78%);}
@@ -44,7 +44,7 @@ a{color:inherit}
 .hero .wrap{position:relative; z-index:1}
 h1{
   font-family:var(--serif); font-weight:400; font-style:italic;
-  font-size:clamp(3.6rem,17vw,9rem); line-height:.92; margin:0; letter-spacing:-.01em;
+  font-size:clamp(3.2rem,15vw,8rem); line-height:.92; margin:0; letter-spacing:-.01em;
 }
 .tag{margin:1.1rem 0 0; color:var(--mute); font-size:clamp(.95rem,3.4vw,1.15rem); max-width:34ch}
 .jump{margin-top:2.4rem; display:flex; gap:.9rem; flex-wrap:wrap}
@@ -95,3 +95,24 @@ footer{border-top:1px solid var(--line); padding:2.6rem 0 3.4rem; color:var(--mu
 footer a{color:var(--blue-soft); text-decoration:none}
 :focus-visible{outline:2px solid var(--blue); outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.rings span{animation:none; opacity:.12}}
+
+/* ---------- link stack (link in bio) ---------- */
+.stack{display:flex; flex-direction:column; gap:.7rem; margin-top:2rem; max-width:460px}
+.card{
+  display:flex; align-items:center; gap:.9rem; min-height:64px;
+  padding:.8rem 1.1rem; border-radius:14px; text-decoration:none;
+  border:1px solid var(--line); background:rgba(8,11,18,.72);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  transition:border-color .2s, background .2s, transform .2s;
+}
+.card:hover,.card:focus-visible{border-color:var(--blue); background:rgba(79,140,255,.08)}
+.card:active{transform:scale(.985)}
+.card span{display:flex; flex-direction:column; line-height:1.3}
+.card b{font-weight:500; font-size:1.02rem}
+.card small{color:var(--mute); font-size:.84rem}
+.card img{width:48px; height:48px; border-radius:8px; flex:none}
+.card.lead{border-color:rgba(79,140,255,.55); background:linear-gradient(135deg,rgba(79,140,255,.18),rgba(8,11,18,.72))}
+.card::after{content:"\2192"; margin-left:auto; color:var(--mute); font-size:1.05rem}
+.more{display:inline-block; margin-top:1.4rem; color:var(--mute); font-size:.85rem; text-decoration:none}
+.more:hover{color:var(--text)}
+@media(prefers-reduced-motion:reduce){.card{transition:none}}
