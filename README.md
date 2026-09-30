@@ -10,7 +10,7 @@ Hand written HTML and CSS. The only network request beyond the page itself is th
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The whole page. Semantic sections for the single, the catalogue, the bio, the links and booking. |
+| `index.html` | The whole page. Semantic sections for the single, the bio, the links and booking. |
 | `styles.css` | Custom properties for the palette and type scale, then a mobile first layout using flexbox and grid. |
 | `cover.jpg` | Cover artwork for the current single. |
 
